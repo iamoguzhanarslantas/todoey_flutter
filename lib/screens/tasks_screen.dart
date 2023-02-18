@@ -7,54 +7,69 @@ class TasksScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
-      body: Container(
-        padding: const EdgeInsets.only(
-          top: 60,
-          left: 30,
-          right: 30,
-          bottom: 30,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.lightBlueAccent,
+        child: const Icon(
+          Icons.add,
+          size: 50,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const CircleAvatar(
-              backgroundColor: Colors.white,
-              radius: 30,
-              child: Icon(
-                Icons.list,
-                size: 30,
-                color: Colors.lightBlueAccent,
-              ),
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.only(
+              top: 60,
+              left: 30,
+              right: 30,
+              bottom: 30,
             ),
-            const SizedBox(
-              height: 10,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 30,
+                  child: Icon(
+                    Icons.list,
+                    size: 30,
+                    color: Colors.lightBlueAccent,
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Todoey',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 50,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                Text(
+                  '12 Tasks',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
+              ],
             ),
-            const Text(
-              'Todoey',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 50,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            const Text(
-              '12 Tasks',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-              ),
-            ),
-            Container(
+          ),
+          Expanded(
+            child: Container(
               decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(13),
-                  topLeft: Radius.circular(13),
+                  topRight: Radius.circular(20),
+                  topLeft: Radius.circular(20),
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

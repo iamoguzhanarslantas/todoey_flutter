@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'screens/screens.dart';
+import 'package:todoey_flutter/screens/screens.dart';
 
 void main() {
   runApp(const MyApp());

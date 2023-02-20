@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:todoey_flutter/widgets/widgets.dart';
 
-import 'widgets.dart';
+
 
 class TasksList extends StatelessWidget {
   const TasksList({
